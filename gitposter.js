@@ -16,9 +16,8 @@ const client=new Client(
 
 client.once("ready",()=>{
     client.login(process.env.TOKEN);
-
-    const webhookURL="1100305174624477204/5W70BLUKv_e-rDGAMpE0zY4Zp3FZYAnCMBmiii2cvFJchk8CaNmOe5kg0BanCTsbY7Cu";
-    client.fetchWebhook(webhookURL).then((hook)=>{
+    
+    client.fetchWebhook(process.env.WEBHOOK).then((hook)=>{
 
         let milestone;
         let title;
